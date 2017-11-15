@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { NotFoundComponent } from './erro/erro.notfound.component';
     NotFoundComponent],
   imports: [
     BrowserModule, // módulos usados na aplicação
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // Indica qual o componente inicial da aplicação
