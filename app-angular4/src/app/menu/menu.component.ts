@@ -8,4 +8,5 @@ export class MenuComponent {
     titulo_escola: string = 'Impacta Treinamentos';
     titulo_cad: string = 'Cadastro de Cursos';
     titulo_lista = 'Listagem de cursos';
+    titulo_masterdetail = 'Mater/Detail';
  }

@@ -12,6 +12,7 @@ import { LogoComponent } from './logo/logo.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListaComponent } from './lista/lista.component';
 import { NotFoundComponent } from './erro/erro.notfound.component';
+import { MasterDetailComponent } from './masterdetail/masterdetail.component';
 
 // Services
 import { CursosService } from './services/cursos.service';
@@ -23,7 +24,9 @@ import { CursosService } from './services/cursos.service';
     LogoComponent,
     CadastroComponent,
     ListaComponent,
-    NotFoundComponent],
+    NotFoundComponent,
+    MasterDetailComponent
+  ],
   imports: [
     BrowserModule, // módulos usados na aplicação
     RouterModule.forRoot(appRoutes),

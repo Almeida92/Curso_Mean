@@ -1,0 +1,36 @@
+<div class="container margem">
+    <h1>Master/Detail</h1>
+    <hr/>
+    <div class="row">
+        <!-- incluindo evento click na lista  -->
+        <div class="col-md-6">
+            <ul class="list_group">
+                <li *ngFor="let item of listaCursos" class="list-group-item">
+                    <span class="badge">{{ item.codigo }}</span>
+                    <a [routerLink]="['/masterdetail']">{{ item.descricao }} </a>
+                </li>
+            </ul>
+        </div>
+        <!-- incluindo o formulário -->
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="codigo">Código:</label>
+                <input type="text" value="{{ curso.codigo }}" class="form-control" id="codigo" name="codigo">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input type="text" value="{{ curso.descricao }}" class="form-control" id="descricao" name="descricao">
+            </div>
+            <div class="form-group">
+                <label for="ch">Carga horária:</label>
+                <input type="number" value="{{ curso.ch }}" class="form-control" id="ch" name="ch">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    Incluir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
