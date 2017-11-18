@@ -1,0 +1,29 @@
+<div class="container margem">
+    <div class="container margem"> 
+        <h1> CADASTRO DE CURSOS</h1>
+        <h3>Código: {{ curso.codigo }}</h3>
+        <h3>Descrição: {{ curso.descricao }}</h3>
+        <h3>Carga Horária: {{ curso.ch }}</h3>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="codigo">Código:</label>
+            <input type="text" value="{{ curso.codigo }}" class="form-control" id="codigo" name="codigo">
+        </div>
+        <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" value="{{ curso.descricao }}" class="form-control" id="descricao" name="descricao">
+        </div>
+        <div class="form-group">
+            <label for="ch">Carga horária:</label>
+            <input type="number" value="{{ curso.ch }}" class="form-control" id="ch" name="ch">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-pencil"></span>
+                Incluir
+            </button>
+        </div>
+    </div>
+</div>
