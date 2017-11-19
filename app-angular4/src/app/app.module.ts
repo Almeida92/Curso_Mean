@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
@@ -34,7 +35,8 @@ import { CursosService } from './services/cursos.service';
   imports: [
     BrowserModule, // módulos usados na aplicação
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     CursosService

@@ -17,7 +17,10 @@ export class MasterDetailComponent {
 
     public listaCursos: ICurso[];
     constructor(cursosService: CursosService) {
-        this.listaCursos = cursosService.getListaCursos();
+        cursosService.getCursos()
+            .subscribe(res => this.listaCursos = res,
+                error => alert(error),
+                () => console.log('Finalizado'));
     }
 
     // para a inclusao de um novo curso
