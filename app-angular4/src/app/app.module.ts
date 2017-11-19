@@ -7,6 +7,7 @@ import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { VerificaCh } from './filters/verificarch.filter';
+import { SubLista } from './filters/sublista.filter';
 
 // usando as rotas
 import { LogoComponent } from './logo/logo.component';
@@ -27,7 +28,8 @@ import { CursosService } from './services/cursos.service';
     ListaComponent,
     NotFoundComponent,
     MasterDetailComponent,
-    VerificaCh
+    VerificaCh,
+    SubLista
   ],
   imports: [
     BrowserModule, // módulos usados na aplicação

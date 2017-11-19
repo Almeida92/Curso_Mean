@@ -1,8 +1,12 @@
 <div class="container margem">
     <h1>LISTAGEM DE CURSOS</h1>
     <div class="col-md-12">
+        <div class="form-group">
+            <label for="codigo">Informe a descrição:</label>
+            <input type="text" #busca (keyup)="0" class="form-control" placeholder="Filtrar pela descrição">
+        </div>
         <ul class="list_group">
-            <li *ngFor="let item of listaCursos" class="list-group-item">
+            <li *ngFor="let item of listaCursos | sublista:busca.value" class="list-group-item">
                 <span class="badge">{{ item.codigo }}</span>
                 <a href="#">{{ item.descricao | uppercase }} </a>
             </li>
