@@ -4,7 +4,7 @@
         <ul class="list_group">
             <li *ngFor="let item of listaCursos" class="list-group-item">
                 <span class="badge">{{ item.codigo }}</span>
-                <a href="#">{{ item.descricao }} </a>
+                <a href="#">{{ item.descricao | uppercase }} </a>
             </li>
         </ul>
     </div>

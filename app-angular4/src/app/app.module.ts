@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { appRoutes } from './rotas/app.routes';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { VerificaCh } from './filters/verificarch.filter';
 
 // usando as rotas
 import { LogoComponent } from './logo/logo.component';
@@ -19,13 +20,14 @@ import { CursosService } from './services/cursos.service';
 
 @NgModule({
   declarations: [
-    AppComponent, // componentes usados na aplicação
+    AppComponent, // componentes, Pipes, Filters usados na aplicação
     MenuComponent,
     LogoComponent,
     CadastroComponent,
     ListaComponent,
     NotFoundComponent,
-    MasterDetailComponent
+    MasterDetailComponent,
+    VerificaCh
   ],
   imports: [
     BrowserModule, // módulos usados na aplicação
