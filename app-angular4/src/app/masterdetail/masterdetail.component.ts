@@ -35,7 +35,8 @@ export class MasterDetailComponent {
 
     public incluir(curso: ICurso): void {
         this.cursosService.setCurso(curso)
-            .subscribe(res => JSON.stringify(res), error => alert(error),
+            .subscribe(res => JSON.stringify(res),
+            error => alert(error),
             () => this.listar());
             
         alert('Curso incluído com sucesso');

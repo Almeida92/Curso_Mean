@@ -12,9 +12,19 @@ export class CursosService {
 
     private url = "http://localhost:7628/api/cursos";
 
+    private handleError(error: Response): Observable<ICurso[]> {
+        const conteudo = error.json();
+        const erro = conteudo.error || JSON.stringify(conteudo) ;
+
+        let msgErro = `Codigo: ${error.status} - Descrição ${erro}`;
+
+        return Observable.throw(msgErro);
+    }
+
     public getCursos(): Observable<ICurso[]> {
         return this._http.get(this.url)
-            .map(res => res.json());
+            .map(res => res.json())
+            .catch(this.handleError);
     }
 
     public setCurso(curso: ICurso): Observable<ICurso> {
