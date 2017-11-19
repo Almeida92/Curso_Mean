@@ -9,6 +9,7 @@ export class MasterDetailComponent {
 
     //para um curso selecionado
     public cursoSelecionado: ICurso;
+    private novoCurso: ICurso;
 
     public selecionar(item: ICurso): void {
         this.cursoSelecionado = item;
@@ -17,5 +18,16 @@ export class MasterDetailComponent {
     public listaCursos: ICurso[];
     constructor(cursosService: CursosService) {
         this.listaCursos = cursosService.getListaCursos();
+    }
+
+    // para a inclusao de um novo curso
+    public novo(): void {
+        this.novoCurso = {codigo:0, descricao: '', ch:0 };
+        this.cursoSelecionado = this.novoCurso;
+    }
+
+    public incluir(curso: ICurso): void {
+        this.listaCursos.push(curso);
+        alert('Curso incluído com sucesso');
     }
 }
