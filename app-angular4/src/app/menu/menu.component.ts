@@ -9,4 +9,5 @@ export class MenuComponent {
     titulo_cad: string = 'Cadastro de Cursos';
     titulo_lista = 'Listagem de cursos';
     titulo_masterdetail = 'Mater/Detail';
- }
+    titulo_masterdetaildb = 'Mater/Detail - Mongodb';
+}

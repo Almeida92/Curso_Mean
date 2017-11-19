@@ -39,6 +39,27 @@ export class CursosService {
         return this._http.post(this.url, json, options).map(res => res.json());
     }
 
+    // acesso ao mondodb
+    private urldb = 'http://localhost:3200/cursos';
+
+    public getCursosDb(): Observable<ICurso[]> {
+        return this._http.get(this.urldb)
+            .map(res => res.json())
+            .catch(this.handleError);
+    }
+
+    public setCursoDb(curso: ICurso): Observable<ICurso> {
+        let header = new Headers({'Content-Type':'application/json'});
+        let options = new RequestOptions({headers: header});
+        let json = JSON.stringify({
+            codigo: curso.codigo,
+            descricao: curso.descricao,
+            ch: curso.ch
+        });
+
+        return this._http.post(this.urldb, json, options).map(res => res.json());
+    }
+
     public getListaCursos(): ICurso[] {
         return [
             {codigo:11, descricao: 'Asp.Net', ch:40},

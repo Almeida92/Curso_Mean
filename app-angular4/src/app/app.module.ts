@@ -16,6 +16,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListaComponent } from './lista/lista.component';
 import { NotFoundComponent } from './erro/erro.notfound.component';
 import { MasterDetailComponent } from './masterdetail/masterdetail.component';
+import { MasterDetailDbComponent } from './masterdetail/masterdetaildb.component';
 
 // Services
 import { CursosService } from './services/cursos.service';
@@ -30,7 +31,8 @@ import { CursosService } from './services/cursos.service';
     NotFoundComponent,
     MasterDetailComponent,
     VerificaCh,
-    SubLista
+    SubLista,
+    MasterDetailDbComponent
   ],
   imports: [
     BrowserModule, // módulos usados na aplicação
